@@ -17,14 +17,17 @@
 # TODO: Test, Build, and Deploy
 - (done) Add linter
 - (done) Add prettier
-- Add tests
-- Minify
-- Shake tree
-- Prune dependencies
-- Deploy in nginx
-- Containerize
+- Add tests (jests)
+- Minify (webpack)
+- Shake tree (webpack)
+- Prune dependencies (webpack)
+- Deploy locally (nginx)
+- Use reverse proxy (ngRok)
+- Containerize (docker and nginx)
 - Deploy in K8s
 - Deploy in Azure AKS
+- Deploy in AWS EKS
+- Setup GitHub Actions CI/CD
 
 ## STEPS
 - npm install --save-dev prettier
