@@ -16,7 +16,7 @@
 
 # TODO: Test, Build, and Deploy
 - (done) Add linter
-- Beautify source
+- (done) Add prettier
 - Add tests
 - Minify
 - Shake tree
@@ -27,6 +27,11 @@
 - Deploy in Azure AKS
 
 ## STEPS
+- npm install --save-dev prettier
+- Manually create .prettierrc
+- Manually create .prettierignore
+- Add "format": "prettier --write 'src/**/*.{ts,tsx}' '**/*.json'", to package.json
+- Add npm run format
 - npm install --save-dev tslint @types/node
 - Add "lint": "tslint -p tsconfig.json 'src/**/*.ts'" in package.json
 - Add "build": "npm run lint && npx tsc" in package.json
