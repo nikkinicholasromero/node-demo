@@ -9,20 +9,25 @@
 - npm install typescript @types/node --save-dev (creates package-lock.json)
 - npm install ts-node nodemon --save-dev (auto-refresh)
 - npx tsc --init (creates tsconfig.json)
-    - manually update tsconfig.json to include outDir and rootDir
+- manually update tsconfig.json to include outDir and rootDir
 - manually create src/index.ts
 - Add "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts" in package.json
-- run "npm start"
+- npm start
 
 # TODO: Test, Build, and Deploy
-- Add linter
+- (done) Add linter
+- Beautify source
 - Add tests
-- Build app
+- Minify
+- Shake tree
+- Prune dependencies
 - Deploy in nginx
 
 ## STEPS
-- Add "build": "npx tsc" in package.json
-- run "npm run build"
+- npm install --save-dev tslint @types/node
+- Add "lint": "tslint -p tsconfig.json 'src/**/*.ts'" in package.json
+- Add "build": "npm run lint && npx tsc" in package.json
+- npm run build
 
 # TODO: Capabilities
 - env variables
