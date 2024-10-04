@@ -22,6 +22,9 @@
 - Shake tree
 - Prune dependencies
 - Deploy in nginx
+- Containerize
+- Deploy in K8s
+- Deploy in Azure AKS
 
 ## STEPS
 - npm install --save-dev tslint @types/node
