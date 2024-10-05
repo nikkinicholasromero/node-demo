@@ -19,7 +19,7 @@
 - (done) Add prettier
 - (done) Add unit tests (jests)
 - Add e2e tests
-- Containerize (docker and nginx)
+- Dockerize
 - Run in K8s
 - Use reverse proxy (ngRok)
 
