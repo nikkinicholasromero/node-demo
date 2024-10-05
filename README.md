@@ -19,13 +19,9 @@
 - (done) Add prettier
 - (done) Add unit tests (jests)
 - Add e2e tests
-- Deploy locally (nginx)
-- Use reverse proxy (ngRok)
 - Containerize (docker and nginx)
-- Deploy in K8s
-- Deploy in Azure AKS
-- Deploy in AWS EKS
-- Setup GitHub Actions CI/CD
+- Run in K8s
+- Use reverse proxy (ngRok)
 
 ## STEPS: Prettier
 - npm install --save-dev prettier
