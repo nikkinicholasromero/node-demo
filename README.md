@@ -18,10 +18,7 @@
 - (done) Add linter
 - (done) Add prettier
 - (done) Add unit tests (jests)
-- (done) Add e2e tests
-- Minify (webpack)
-- Shake tree (webpack)
-- Prune dependencies (webpack)
+- Add e2e tests
 - Deploy locally (nginx)
 - Use reverse proxy (ngRok)
 - Containerize (docker and nginx)
