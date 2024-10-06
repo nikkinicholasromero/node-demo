@@ -6,8 +6,8 @@
 ## STEPS
 - Create folder (node-demo)
 - npm init (creates package.json)
-- npm install typescript @types/node --save-dev (creates package-lock.json)
-- npm install ts-node nodemon --save-dev (auto-refresh)
+- npm install --save-dev typescript @types/node
+- npm install --save-dev ts-node nodemon
 - npx tsc --init (creates tsconfig.json)
 - manually update tsconfig.json to include outDir and rootDir
 - manually create src/index.ts
@@ -19,7 +19,7 @@
 - (done) Add prettier
 - (done) Add unit tests (jests)
 - Add e2e tests
-- Dockerize
+- (done) Dockerize
 - Run in K8s
 - Use reverse proxy (ngRok)
 
@@ -45,6 +45,12 @@
 
 ## STEPS: Build
 - Add "build": "npm run format && npm run lint && npm run test && npx tsc" in package.json
+
+# STEPS: Dockerize
+- Manually create Dockerfile
+- Manuall create .dockerignore
+- docker build -t node-demo .
+- docker run -p 8080:8080 node-demo
 
 # TODO: Capabilities
 - env variables
