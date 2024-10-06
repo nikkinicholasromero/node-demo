@@ -20,7 +20,7 @@
 - (done) Add unit tests (jests)
 - Add e2e tests
 - (done) Dockerize
-- Run in K8s
+- (done) Run in K8s
 - Use reverse proxy (ngRok)
 
 ## STEPS: Prettier
@@ -49,8 +49,17 @@
 # STEPS: Dockerize
 - Manually create Dockerfile
 - Manuall create .dockerignore
-- docker build -t node-demo .
-- docker run -p 8080:8080 node-demo
+- docker build -t nikkinicholasromero/node-demo:latest .
+- docker push nikkinicholasromero/node-demo:latest
+- docker run -p 8080:8080 nikkinicholasromero/node-demo:latest
+
+# STEPS: Deploy in K8s
+- Manually create deployment.yaml
+- Manually create service.yaml
+- kubectl delete service --ignore-not-found=true node-demo
+- kubectl delete deployments --ignore-not-found=true node-demo
+- kubectl apply -f kubernetes/deployment.yaml
+- kubectl apply -f kubernetes/service.yaml
 
 # TODO: Capabilities
 - env variables
