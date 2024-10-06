@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "npm run build && node dist/index.js",
     "format": "prettier --write 'src/**/*.{ts,tsx}' '**/*.{js,json,yaml}'",
     "lint": "tslint -p tsconfig.json 'src/**/*.ts'",
     "test": "jest --coverage",
