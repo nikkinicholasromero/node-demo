@@ -16,7 +16,7 @@ spec:
         app: node-demo
     spec:
       containers:
-      - name: node-demo
-        image: nikkinicholasromero/node-demo:latest
-        ports:
-        - containerPort: 8080
+        - name: node-demo
+          image: nikkinicholasromero/node-demo:latest
+          ports:
+            - containerPort: 8080
