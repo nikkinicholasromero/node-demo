@@ -77,8 +77,8 @@
     - Authentication and Authorization
 - Integrations
     - DB
-    - File IO
     - HTTP Client
+    - File IO
 
 ## STEPS: WebSocket
 - npm install ws
