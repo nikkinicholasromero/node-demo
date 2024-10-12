@@ -72,10 +72,13 @@
 - (done) Environment Variables
 - (done) Install Express JS
 - HTTP Server
-- DB
-- File IO
-- HTTP Client
-- JWT Auth
+    - Endpoints
+    - Interceptor
+    - Authentication and Authorization
+- Integrations
+    - DB
+    - File IO
+    - HTTP Client
 
 ## STEPS: WebSocket
 - npm install ws
