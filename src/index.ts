@@ -1,5 +1,6 @@
 import http from "http";
 import { sum } from "./core";
+import WebSocket from "ws";
 
 const requestHandler = (
   req: http.IncomingMessage,
@@ -10,5 +11,19 @@ const requestHandler = (
 };
 
 const server = http.createServer(requestHandler);
+
+const wss = new WebSocket.Server({ server });
+
+wss.on("connection", (ws: WebSocket) => {
+  ws.send("WebSocket open");
+
+  ws.on("message", (message: any) => {
+    ws.send(`Server received: ${message}`);
+  });
+
+  ws.on("close", () => {
+    ws.send("WebSocket closed");
+  });
+});
 
 server.listen(8080);

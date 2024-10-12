@@ -68,9 +68,14 @@
 - ngrok http 8080
 
 # TODO: Capabilities
+- (done) WebSocket
 - env variables
-- add endpoints with full http features
-- DB access (crud and transactional)
-- file io
-- network calls using full http features
-- JWT authentication and authorization
+- HTTP Server
+- DB
+- File IO
+- HTTP Client
+- JWT Auth
+
+## STEPS: WebSocket
+- npm install ws
+- npm install @types/ws --save-dev
