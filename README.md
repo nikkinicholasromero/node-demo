@@ -70,6 +70,7 @@
 # TODO: Capabilities
 - (done) WebSocket
 - (done) Environment Variables
+- (done) Install Express JS
 - HTTP Server
 - DB
 - File IO
@@ -82,3 +83,7 @@
 
 ## STEPS: Environment Variables
 - npm install dotenv --save
+
+## STEPS: Install Express JS
+- npm install express
+- npm install --save-dev @types/express

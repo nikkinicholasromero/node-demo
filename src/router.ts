@@ -1,31 +1,28 @@
-import http from "http";
-import sum from "./core";
 import WebSocket from "ws";
+import { Request, Response } from "express";
+import sum from "./core";
 
-const initializeRouter = (wss: WebSocket.Server) => {
-  return (req: http.IncomingMessage, res: http.ServerResponse): void => {
+const initializeRoutes = (app: any, wss: WebSocket.Server) => {
+  app.get("/", (req: Request, res: Response) => {
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send("HTTP route was accessed!");
       }
     });
 
-    if (req.url === "" || req.url === "/") {
-      res.writeHead(200, { "Content-Type": "text/plain" });
-      res.end(
-        "Hello, World: " +
-          sum(2, 5) +
-          ": " +
-          process.env.LOGNAME +
-          ": " +
-          process.env.ABC,
-      );
-      return;
-    }
+    res.send(
+      "Hello, World: " +
+        sum(2, 5) +
+        ": " +
+        process.env.LOGNAME +
+        ": " +
+        process.env.ABC,
+    );
+  });
 
-    res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("Not Found");
-  };
+  app.get("*", (req: Request, res: Response) => {
+    res.status(404).send("Not Found");
+  });
 };
 
-export default initializeRouter;
+export default initializeRoutes;

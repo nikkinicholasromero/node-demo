@@ -1,10 +1,11 @@
 import "dotenv/config";
+import express from "express";
 import http from "http";
 import initializeWebSocket from "./websocket";
-import initializeRouter from "./router";
+import initializeRoutes from "./router";
 
-const server = http.createServer();
+const app = express();
+const server = http.createServer(app);
 const wss = initializeWebSocket(server);
-const router = initializeRouter(wss);
-server.on("request", router);
-server.listen(8080);
+initializeRoutes(app, wss);
+app.listen(8080);
