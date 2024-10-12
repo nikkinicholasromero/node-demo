@@ -1,13 +1,21 @@
 import http from "http";
 import { sum } from "./core";
 import WebSocket from "ws";
+import "dotenv/config";
 
 const requestHandler = (
   req: http.IncomingMessage,
   res: http.ServerResponse,
 ): void => {
   res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello, World: " + sum(2, 5));
+  res.end(
+    "Hello, World: " +
+      sum(2, 5) +
+      ": " +
+      process.env.LOGNAME +
+      ": " +
+      process.env.ABC,
+  );
 };
 
 const server = http.createServer(requestHandler);

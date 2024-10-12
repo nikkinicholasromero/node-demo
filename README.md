@@ -69,7 +69,7 @@
 
 # TODO: Capabilities
 - (done) WebSocket
-- env variables
+- (done) Environment Variables
 - HTTP Server
 - DB
 - File IO
@@ -79,3 +79,6 @@
 ## STEPS: WebSocket
 - npm install ws
 - npm install @types/ws --save-dev
+
+## STEPS: Environment Variables
+- npm install dotenv --save
