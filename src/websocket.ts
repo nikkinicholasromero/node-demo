@@ -1,7 +1,7 @@
+import http from "http";
 import WebSocket from "ws";
-import "dotenv/config";
 
-const initializeWebSocket = (server: any) => {
+const initializeWebSocket = (server: http.Server) => {
   const wss = new WebSocket.Server({ server });
 
   wss.on("connection", (ws: WebSocket) => {
@@ -15,6 +15,8 @@ const initializeWebSocket = (server: any) => {
       ws.send("WebSocket closed");
     });
   });
+
+  return wss;
 };
 
 export default initializeWebSocket;
