@@ -71,10 +71,7 @@
 - (done) WebSocket
 - (done) Environment Variables
 - (done) Install Express JS
-- HTTP Server
-    - Endpoints
-    - Interceptor
-    - Authentication and Authorization
+- (done) HTTP Server
 - Integrations
     - DB
     - HTTP Client
